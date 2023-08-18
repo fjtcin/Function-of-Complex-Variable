@@ -63,32 +63,32 @@
 \newcommand{\writtensection}[0]{0}
 
 % Numbered question
-\providecommand{\question}{}
-\renewcommand{\question}[0]{%
-  % Emit \newpage if option `newpage` is present
-  \ifthenelse{\equal{\@opnewpage}{1}}{%
-    \newpage
-  }{}
+% \providecommand{\question}{}
+% \renewcommand{\question}[0]{%
+%   % Emit \newpage if option `newpage` is present
+%   \ifthenelse{\equal{\@opnewpage}{1}}{%
+%     \newpage
+%   }{}
 
-  % Wrap in minipage so that we don't get a line break enywhere in between
-  \begin{minipage}{\linewidth}%
-    \stepcounter{questionCounter}%
-      \vspace{.2in}%
-      \ifx\writtensection\undefined{}
-        \noindent{\bf \questiontype\ \arabic{questionCounter}.}%
-        \else
-          \ifnum\writtensection=0
-          \noindent{\bf \questiontype\ \arabic{questionCounter}.}%
-          \else
-          \noindent{\bf \questiontype\ \writtensection.\arabic{questionCounter}}%
-        \fi
-      \vspace{0.3em} \hrule \vspace{.1in}%
-  \end{minipage}
-}
+%   % Wrap in minipage so that we don't get a line break enywhere in between
+%   \begin{minipage}{\linewidth}%
+%     \stepcounter{questionCounter}%
+%       \vspace{.2in}%
+%       \ifx\writtensection\undefined{}
+%         \noindent{\bf \questiontype\ \arabic{questionCounter}.}%
+%         \else
+%           \ifnum\writtensection=0
+%           \noindent{\bf \questiontype\ \arabic{questionCounter}.}%
+%           \else
+%           \noindent{\bf \questiontype\ \writtensection.\arabic{questionCounter}}%
+%         \fi
+%       \vspace{0.3em} \hrule \vspace{.1in}%
+%   \end{minipage}
+% }
 
 % Named question, takes one argument
-\WithSuffix\providecommand\question*{}
-\WithSuffix\renewcommand\question*[1]{%
+% \WithSuffix\providecommand\question{}
+\newcommand\question[1]{%
   % Emit \newpage if option `newpage` is present
   \ifthenelse{\equal{\@opnewpage}{1}}{%
     \newpage%
@@ -98,14 +98,14 @@
     \addtocounter{questionCounter}{1}%
     \setcounter{partCounter}{0}%
     \vspace{.2in}%
-    \noindent{\bf \arabic{questionCounter}. #1}%
+    \noindent{\bf \questiontype\ #1}%
     \vspace{0.3em} \hrule \vspace{.1in}%
   \end{minipage}
 }
 
 % Override normal section defintions
-\renewcommand{\section}[0]{\question}
-\WithSuffix\newcommand\section*[1]{\question*{#1}}
+% \renewcommand{\section}[0]{\question}
+% \WithSuffix\newcommand\section*[1]{\question*{#1}}
 
 % ----- Question Parts --------------------------------------------------------
 
