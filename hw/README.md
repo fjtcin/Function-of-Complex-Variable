@@ -1,3 +1,3 @@
 # 作业
 
-从[答案](../answer/)中截取的作业解答。
+> 模板：[LaTeX Homework Class](https://github.com/jez/latex-homework-class)

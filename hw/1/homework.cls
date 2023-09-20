@@ -28,8 +28,10 @@
 \RequirePackage{centernot}
 
 % Nice lists
-\RequirePackage{enumerate}
+% \RequirePackage{enumerate}
 \RequirePackage{enumitem}
+\setlist[itemize]{noitemsep, topsep=0pt}
+\setlist[enumerate]{noitemsep, topsep=0pt}
 
 % Nice images, figures, and listings
 \RequirePackage{graphicx}
@@ -102,6 +104,8 @@
     \vspace{0.3em} \hrule \vspace{.1in}%
   \end{minipage}
 }
+
+\newcommand\subquestion[1]{{\bfseries (#1)}}
 
 % Override normal section defintions
 % \renewcommand{\section}[0]{\question}
