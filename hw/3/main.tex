@@ -1,0 +1,184 @@
+\documentclass{homework}
+
+\newcommand{\hwname}{张学涵}
+\newcommand{\hwemail}{xxhzhang@mail.ustc.edu.cn}
+\newcommand{\hwtype}{作业}
+\newcommand{\hwnum}{3}
+\newcommand{\hwclass}{复变函数 B}
+\newcommand{\hwlecture}{宁吴庆}
+\newcommand{\hwsection}{}
+
+\usepackage{siunitx}
+\DeclareMathOperator\Ln{Ln}
+
+\begin{document}
+\maketitle
+
+\begin{center}
+  \fbox{\bfseries\Large 第~二~章}
+\end{center}
+
+\question{11}
+设 \(z=x+iy\).
+
+\subquestion{2}
+令 \(y=0\), 则 \(\lim_{z\to0}z\sin\frac{1}{z}=\lim_{x\to0}x\sin\frac{1}{x}=0\).
+
+令 \(x=0\), 则 \(\lim_{z\to0}z\sin\frac{1}{z}=\lim_{y\to0}iy\frac{e^{\frac{1}{y}}-e^{-\frac{1}{y}}}{2i}=\lim_{y\to0}\frac{y}{2}(e^{\frac{1}{y}}-e^{-\frac{1}{y}})=+\infty\).
+
+故 \(\lim_{z\to0}z\sin\frac{1}{z}\) 不存在.
+
+\subquestion{3}
+令 \(y=0\), 则 \(\lim_{z\to1}\frac{ze^{\frac{1}{z-1}}}{e^z-1}=\lim_{x\to1}\frac{xe^{\frac{1}{x-1}}}{e^x-1}\).
+
+\(\lim_{x\to1^+}\frac{xe^{\frac{1}{x-1}}}{e^x-1}=+\infty, \lim_{x\to1^-}\frac{xe^{\frac{1}{x-1}}}{e^x-1}=0\).
+
+故 \(\lim_{z\to1}\frac{ze^{\frac{1}{z-1}}}{e^z-1}\) 不存在.
+
+\question{13}
+\subquestion{1}
+\(\sin z=\frac{1}{2i}(e^{iz}-e^{-iz})=2\).
+
+令 \(t=e^{iz}\), 上式化为 \(t^2-4it-1=0\), 解得 \(t=e^{iz}=2i\pm\sqrt{3}i\).
+
+故 \(z=\frac{1}{i}\Ln(2i\pm\sqrt{3}i)=\frac{1}{i}\left(\ln(2\pm\sqrt{3})+i(\frac{\pi}{2}+2k\pi)\right)=(2k+\frac{1}{2})\pi-i\ln(2\pm\sqrt{3}), k\in\mathbb{Z}\).
+
+\subquestion{3}
+\(z=\Ln A=\ln|A|\pm i(\arg A+2k\pi), k\in\mathbb{Z}\).
+
+\question{14}
+\subquestion{1}
+\(e^z+1\neq 0\), 故解析区域为 \(\{z\mid z\neq i(2k+1)\pi, k\in\mathbb{Z}\}\).
+
+\(f'(z)=-\frac{e^z}{(1+e^z)^2}\).
+
+\subquestion{3}
+解析区域为 \(\{z\mid z\neq 1\}\).
+
+\(f'(z)=e^{\frac{1}{z-1}}\left(1-\frac{z}{(z-1)^2}\right)\).
+
+\question{16}
+设 \(z=x+iy\), 则 \(\begin{aligned}[t]
+  \cos z&=\frac{1}{2}(e^{iz}+e^{-iz})\\
+  &=\frac{1}{2}(e^{ix-y}+e^{y-ix})\\
+  &=\frac{1}{2}\left(e^{-y}(\cos x+i\sin x)+e^y(\cos x-i\sin x)\right).
+\end{aligned}\)
+
+\(\Im(\cos z)=0\), 即 \(e^{-y}\sin x-e^y\sin x=0\), 解得 \(y=0\) 或 \(x=k\pi, k\in\mathbb{Z}\).
+
+故 \(\cos z\) 在实轴及直线族 \(\Re(z)=k\pi, k\in\mathbb{Z}\) 上取实数值.
+
+\question{17}
+以下 \(k\in\mathbb{Z}\).
+
+\subquestion{2}
+\(1^{\sqrt{2}}=e^{\sqrt{2}\Ln 1}=e^{i2\sqrt{2}k\pi}\).
+
+\((-2)^{\sqrt{2}}=e^{\sqrt{2}\Ln(-2)}=e^{\sqrt{2}(\ln 2+i(\pi+2k\pi))}=e^{\sqrt{2}\ln 2+i\sqrt{2}(2k+1)\pi}\).
+
+\(2^i=e^{i\Ln 2}=e^{i(\ln 2+i2k\pi)}=e^{-2k\pi+i\ln 2}\).
+
+\((3-4i)^{1+i}=e^{(1+i)\Ln(3-4i)}=e^{(\ln 5+\arctan\frac{4}{3}-2k\pi)+i(\ln 5-\arctan\frac{4}{3}+2k\pi)}=e^{(\ln 5+\arctan\frac{4}{3}-2k\pi)+i(\ln 5-\arctan\frac{4}{3})}\).
+
+\fbox{\parbox{\textwidth}{注释: 有同学喜欢把 \(\arctan\frac{4}{3}\) 写成 \ang{53}, 请不要这么写, 这二者不相等且我们习惯使用弧度制.}}
+
+\begin{center}
+  \fbox{\bfseries\Large 第~三~章}
+\end{center}
+
+\question{1}
+\subquestion{2}
+令 \(z=2e^{i\theta}\), 则 \(dz=2ie^{i\theta}d\theta\).
+
+\(\int_C\frac{2z-3}{z}\,dz=\int_{-\pi}^{0}\frac{4e^{i\theta}-3}{2e^{i\theta}}2ie^{i\theta}\,d\theta=\int_{-\pi}^{0}(4ie^{i\theta}-3i)\,d\theta=4e^{i\theta}|_{-\pi}^{0}-3i\theta|_{-\pi}^{0}=8-3i\pi\).
+
+\question{2}
+\subquestion{2}
+令 \(z=e^{i\theta}\), 则 \(dz=ie^{i\theta}d\theta\).
+
+\(\int_C|z|\,dz=-\int_{\frac{\pi}{2}}^{\frac{3\pi}{2}}ie^{i\theta}\,d\theta=-e^{i\theta}|_{\frac{\pi}{2}}^{\frac{3\pi}{2}}=2i\).
+
+\question{3}
+\subquestion{2}
+\(f(z)=x^2+iy^2\), 则 \(|f(z)|=\sqrt{x^4+y^4}\leq\sqrt{(x^2+y^2)^2}=1\).
+
+积分路径长度为 \(\pi\), 由长大不等式, \(|\int_Cf(z)\,dz|\leq\pi\).
+
+\question{4}
+\(f(z)=\frac{1}{z^2}\), 则 \(|f(z)|=\frac{1}{|z|^2}\leq1\).
+
+积分路径长度为 \(2\), 由长大不等式, \(|\int_Cf(z)\,dz|\leq2\).
+
+\question{7}
+本题的证明完全类似于书本例 3.
+
+对任意 \(\epsilon>0\), 存在 \(R_0>0\), 当 \(|z|>R_0\) 时, 有 \(|zf(z)-A|<\epsilon\).
+
+再注意到 \(\int_{C_R}\frac{dz}{z}=\int_{0}^{\alpha}\frac{iRe^{i\theta}}{Re^{i\theta}}\,d\theta=i\alpha\).
+
+于是取 \(R>R_0\), 由长大不等式, 即得下面的估计:
+\begin{align*}
+  \left\lvert\int_{C_R}f(z)\,dz-iA\alpha\right\rvert&=\left\lvert\int_{C_R}f(z)\,dz-\int_{C_R}\frac{A}{z}\,dz\right\rvert\\
+  &=\left\lvert\int_{C_R}\frac{zf(z)-A}{z}\,dz\right\rvert\\
+  &<\frac{\epsilon}{R}R\alpha\\
+  &=\epsilon\alpha.
+\end{align*}
+这就证明了 \(\lim_{R\to+\infty}\int_{C_R}f(z)\,dz=iA\alpha\).
+
+\question{8}
+由于 \(Q(z)\) 比 \(P(z)\) 高 2 次, 则 \(\lim_{z\to\infty}\frac{zP(z)}{Q(z)}=0\).
+应用上题结论, \(\lim_{R\to+\infty}\int_{|z|=R}\frac{P(z)}{Q(z)}\,dz=0\).
+
+直接使用长大不等式也可证明, 注意到 \(\frac{P(z)}{Q(z)}=\frac{1}{z^2}M(z)\), \(M(z)\) 存在有限的最大值 \(M\), 故 \(|\int_{|z|=R}\frac{P(z)}{Q(z)}\,dz|=\int_{|z|=R}\frac{M(z)}{z^2}\,dz\leq\frac{M}{R^2}2\pi R\),
+故 \(\lim_{R\to+\infty}\int_{|z|=R}\frac{P(z)}{Q(z)}\,dz=0\).
+
+\begin{center}
+  \fbox{\bfseries\Large 附~加}
+\end{center}
+
+\question{1}
+由于 \(\lim_{z\to\infty}f(z)=0\), 则对任意 \(\epsilon>0\), 存在 \(R_0>0\), 当 \(|z|>R_0\) 时, 有 \(|f(z)|<\epsilon\).
+
+令 \(z=Re^{i\theta}\), 则 \(|dz|=|Rie^{i\theta}d\theta|=Rd\theta\), \(|e^{imz}|=e^{\Re(imz)}=e^{-Rm\sin\theta}\).
+\begin{align*}
+  \left\lvert\int_{C_R}f(z)e^{imz}\,dz\right\rvert&\leq\int_{0}^{\pi}|f(z)|e^{-Rm\sin\theta}R\,d\theta\\
+  &<\epsilon R\int_{0}^{\pi}e^{-Rm\sin\theta}\,d\theta\\
+  &=2\epsilon R\int_{0}^{\frac{\pi}{2}}e^{-Rm\sin\theta}\,d\theta\\
+  &\leq2\epsilon R\int_{0}^{\frac{\pi}{2}}e^{-Rm\frac{2}{\pi}\theta}\,d\theta\\
+  &=-\frac{\epsilon\pi}{m}e^{-Rm\frac{2}{\pi}\theta}|_{0}^{\frac{\pi}{2}}\\
+  &=\frac{\epsilon\pi}{m}(1-e^{-Rm}).
+\end{align*}
+故 \(\lim_{R\to+\infty}\int_{C_R}f(z)e^{imz}\,dz=0\).
+
+\question{2}
+设 \(z=x+iy\). 在复平面上取闭路 \(C=\{(x,y)\mid -R\leq x\leq R, y=0\}\cup\{(x,y)\mid x=-R, 0\leq y\leq b\}\cup\{(x,y)\mid -R\leq x\leq R, y=b\}\cup\{(x,y)\mid x=R, 0\leq y\leq b\}\).
+
+由柯西积分定理,
+\[\int_Cf(z)\,dz=\int_{R}^{-R}f(z)\,dz+\int_{-R}^{-R+ib}f(z)\,dz+\int_{-R+ib}^{R+ib}f(z)\,dz+\int_{R+ib}^{R}f(z)\,dz=0.\]
+四个积分在闭路的四个部分上.
+
+对于第一部分,
+\begin{align*}
+  \lim_{R\to+\infty}\int_{R}^{-R}f(z)\,dz&=-\int_{-\infty}^{+\infty}e^{-ax^2}\,dx\\
+  &=-\sqrt{\frac{\pi}{a}}\text{ (这是\href{https://en.wikipedia.org/wiki/Gaussian_integral}{高斯积分})}.
+\end{align*}
+对于第二部分, \(z=-R+iy\),
+\begin{align*}
+  \left\lvert\int_{-R}^{-R+ib}f(z)\,dz\right\rvert&=\left\lvert\int_{0}^{b}e^{-a(-R+iy)^2}i\,dy\right\rvert\\
+  &=\int_{0}^{b}e^{-aR^2+ay^2}\,dy\\
+  &=e^{-aR^2}\int_{0}^{b}e^{ay^2}\,dy\\
+  &\leq e^{-aR^2}\int_{0}^{b}e^{ab^2}\,dy\\
+  &=e^{-aR^2}be^{ab^2},
+\end{align*}
+故
+\[\lim_{R\to+\infty}\int_{-R}^{-R+ib}f(z)\,dz=0.\]
+对于第四部分, \(z=R+iy\),
+\begin{align*}
+  \left\lvert\int_{R}^{R+ib}f(z)\,dz\right\rvert&=\left\lvert\int_{0}^{b}e^{-a(R+iy)^2}i\,dy\right\rvert\\
+  &=\int_{0}^{b}e^{-aR^2+ay^2}\,dy\\
+  &\leq e^{-aR^2}be^{ab^2},
+\end{align*}
+故
+\[\lim_{R\to+\infty}\int_{R+ib}^{R}f(z)\,dz=0.\]
+题目中的积分为第三部分, \(\int_{-\infty+ib}^{+\infty+ib}e^{-az^2}\,dz=\lim_{R\to+\infty}\int_{-R+ib}^{R+ib}f(z)\,dz=\sqrt{\frac{\pi}{a}}\).
+\end{document}
