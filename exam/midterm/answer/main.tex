@@ -26,6 +26,15 @@
 
 \fbox{\parbox{\textwidth}{注释: 习题课已经讲过, \(\arg\) 和 \(\arctan\) 不等价. 很多人直接 \(0<\frac{-2x}{x^2+y^2-1}<1\), 算出两个区域的并.}}
 
+\question{3}
+
+\begin{center}
+  \includegraphics[page=1, width=\columnwidth]{figure/hw4_soln.pdf}
+  \includegraphics[page=2, width=\columnwidth]{figure/hw4_soln.pdf}
+\end{center}
+
+Source: \href{http://ramanujan.math.trinity.edu/rdaileda/teach/m4364f07/hw4_soln.pdf}{link}.
+
 \question{5}
 
 首先验证 \(v(x, y)\) 是调和函数.
@@ -60,7 +69,7 @@
 
 因为 \(f(0)=0\), 故 \(C=0\).\hfill (16 分)
 
-令 \(x=z\geq0, y=0\), 得 \(f(z)=u(x,y)+iv(x,y)=\sqrt{2z}, z\in\mathbb{C}\).\hfill (20 分)
+令 \(x=z\geq0, y=0\), 得 \(f(z)=u(x,y)+iv(x,y)=(2z)^{\frac{1}{2}}, z\in\mathbb{C}\).\hfill (20 分)
 
 \fbox{\parbox{\textwidth}{注释: 习题课已经讲过, 这种题必须先验证调和函数, 最后结果也要用 \(z\) 表示. 我们先得到 \(f(z)\) 在实轴非负半轴处的函数表达式, 由唯一性定理即可推广至全复平面. 当然, 很多人这里积分没算对, 所有人都认为 \(y=0\) 时 \(\frac{y}{2 \sqrt{x^2+y^2} \sqrt{-x+\sqrt{x^2+y^2}}}=0\), 而没注意到此时分母也是 0. 如果不化简 \(\frac{y}{2 \sqrt{x^2+y^2} \sqrt{-x+\sqrt{x^2+y^2}}}\), 对于这种分子分母都为 0 的情形, 我们不能取 \(y=0\) 积分, 但可以取 \(y=1\) 积分, 此时积分路径变为 \((0,1)\rightarrow(x,1)\rightarrow(x,y)\). 或者, 也可以取积分路径 \((0,0)\rightarrow(0,y)\rightarrow(x,y)\). 另一个需要换元的积分算出来的寥寥无几, 为避免麻烦, 我们这里也可以用第 6 题的结论, 在极坐标下处理.
 
@@ -83,7 +92,7 @@
 
 因为 \(f(0)=0\), 故 \(C=0\).
 
-令 \(r=z, \theta=0\), 得 \(f(z)=u(r,\theta)+iv(r,\theta)=\sqrt{2z}, z\in\mathbb{C}\).
+令 \(r=z, \theta=0\), 得 \(f(z)=u(r,\theta)+iv(r,\theta)=(2z)^{\frac{1}{2}}, z\in\mathbb{C}\).
 
 由此可见极坐标下处理更为简单. 若取积分路径为 \((0,0)\rightarrow(0,\theta)\rightarrow(r,\theta)\), 甚至只需计算一个积分.}}
 
