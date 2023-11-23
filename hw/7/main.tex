@@ -1,0 +1,167 @@
+\documentclass{homework}
+
+\newcommand{\hwname}{张学涵}
+\newcommand{\hwemail}{xxhzhang@mail.ustc.edu.cn}
+\newcommand{\hwtype}{作业}
+\newcommand{\hwnum}{7}
+\newcommand{\hwclass}{复变函数 B}
+\newcommand{\hwlecture}{宁吴庆}
+\newcommand{\hwsection}{}
+
+\usepackage{siunitx}
+\DeclareMathOperator\Res{Res}
+
+\begin{document}
+\maketitle
+
+\begin{center}
+  \fbox{\bfseries\Large 第~四~章}
+\end{center}
+
+\question{12}
+\subquestion{1}
+若 \(a\) 为可去奇点, 展开式为 \(\sum_{n=0}^{+\infty}c_n(z-a)^n, |z-a|<r\);
+
+若 \(a\) 为 \(m\) 级极点, 展开式为 \(\sum_{n=-m}^{+\infty}c_n(z-a)^n, c_{-m}\neq0, 0<|z-a|<r\);
+
+若 \(a\) 为本性奇点, 展开式为 \(\sum_{n=-\infty}^{+\infty}c_n(z-a)^n, 0<|z-a|<r\), 其中 \(c_{-n}\)(\(n>0\)) 中有无穷多个不为 0.
+
+以上 \(r\) 为 \(a\) 与其他 3 个奇点距离之最小值.
+
+\subquestion{2}
+\(f(z)\) 可展开为 \(\sum_{n=0}^{+\infty}a_n(z-a)^n, |z-a|<R, R=\min\{|a-a_1|, |a-a_2|, |a-a_3|\}\).
+
+\question{13}
+\subquestion{3}
+奇点 \(z=1, z=\infty\).
+
+\(z=1\) 为本性奇点, 因为 \(\lim_{z\to1}\sin\frac{1}{1-z}\) 不存在.
+
+\(z=\infty\) 为可去奇点, 因为 \(\lim_{z\to\infty}\sin\frac{1}{1-z}=0\).
+
+\subquestion{6}
+奇点 \(z=0, z=1, z=2k\pi i, k\in\mathbb{Z}\setminus\{0\}\).
+
+\(z=0\) 为可去奇点, 因为 \(\lim_{z\to0}\frac{ze^{\frac{1}{z-1}}}{e^z-1}=\frac{1}{e}\lim_{z\to0}\frac{z}{e^z-1}=\frac{1}{e}\lim_{z\to0}\frac{z}{z+o(z)}=\frac{1}{e}\lim_{z\to0}\frac{1}{1+\frac{o(z)}{z}}=\frac{1}{e}\).
+
+\(z=1\) 为本性奇点, 因为 \(\lim_{z\to1}\frac{ze^{\frac{1}{z-1}}}{e^z-1}\) 不存在. \(z\) 在实轴上时, \(\lim_{z\to1^+}\frac{ze^{\frac{1}{z-1}}}{e^z-1}=+\infty, \lim_{z\to1^-}\frac{ze^{\frac{1}{z-1}}}{e^z-1}=0.\)
+
+\(z=2k\pi i, k\in\mathbb{Z}\setminus\{0\}\) 为 1 级极点. 令 \(g(z)=\frac{1}{f(z)}=\frac{e^z-1}{ze^{\frac{1}{z-1}}}\). 则 \(g'(z)=\frac{e^zze^{\frac{1}{z-1}}-(e^z-1)(ze^{\frac{1}{z-1}})'}{(ze^{\frac{1}{z-1}})^2}\neq0\).
+
+\fbox{\parbox{\textwidth}{注释: \(z=\infty\) 并非孤立奇点, 因为 \(f(z)\) 在 \(\infty\) 点的邻域恒有不解析点 \(2k\pi i\).}}
+
+\subquestion{9}
+奇点 \(z=1, z=\infty\).
+
+\(\frac{1-\cos z}{z^n}=\frac{\sum_{k=1}^{+\infty}(-1)^k\frac{z^{2k}}{(2k)!}}{z^n}=\sum_{k=1}^{+\infty}\frac{(-1)^k}{(2k)!}z^{2k-n}\).
+
+当 \(n>2\) 时, \(z=0\) 为 \(n-2\) 级极点;
+当 \(n\leq2\) 时, \(z=0\) 为可去奇点.
+
+\(z=\infty\) 为本性奇点, 证明见 14(4).
+
+\question{14}
+\subquestion{3}
+\(\lim_{z\to\infty}\frac{z^2+4}{e^z}=0\), 可去奇点.
+
+\subquestion{4}
+\(\lim_{z\to\infty}\frac{1-\cos z}{z^n}\) 不存在, 本性奇点.
+
+也可通过展开得到, \(\frac{1-\cos z}{z^n}=\frac{1}{z^n}-\frac{1}{z^n}\sum_{m=0}^{+\infty}\frac{(-1)^mz^{2m}}{(2m)!}\), 有无穷个正次幂.
+
+\subquestion{7}
+\(\lim_{z\to\infty}\sin\frac{1}{z}=0\), 可去奇点.
+
+\begin{center}
+  \fbox{\bfseries\Large 第~五~章}
+\end{center}
+
+\question{1}
+\subquestion{2}
+\(1+z^{2n}=0\) 得极点 \(z_k=\exp(\frac{i(2k+1)\pi}{2n}), k=0,1,\dots,2n-1\).
+
+\(\Res[\frac{z^{2n}}{1+z^{2n}}, z_k]=\frac{z_k^{2n}}{2nz_k^{2n-1}}=\frac{z_k}{2n}=\frac{1}{2n}\exp(\frac{i(2k+1)\pi}{2n})\).
+
+\subquestion{4}
+极点 \(z=0\), \(\frac{1-e^{2z}}{z^4}=\frac{-1}{z^4}\sum_{n=1}^{+\infty}\frac{(2z)^n}{n!}\).
+
+\(\frac{1}{z}\) 项的系数是 \(-\frac{4}{3}\), 故 \(\Res[\frac{1-e^{2z}}{z^4}, 0]=-\frac{4}{3}\).
+
+\subquestion{8}
+设 \(f(z)=\frac{1}{z}(\frac{1}{z+1}+\dots+\frac{1}{(z+1)^n})\), 极点 \(z=0, z=1\).
+
+由于 \(z=0\) 是一级极点, 故 \(\Res[f(z), 0]=\lim_{z\to0}zf(z)=n\).
+
+另一方面, \(f(z)=-\frac{1}{1-(z+1)}(\frac{1}{z+1}+\dots+\frac{1}{(z+1)^n})=-(\sum_{k=0}^{+\infty}(z+1)^k)(\frac{1}{z+1}+\dots+\frac{1}{(z+1)^n})\), \(\frac{1}{z+1}\) 的系数为 \(-n\), 故 \(\Res[f(z), -1]=-n\).
+
+\question{3}
+\subquestion{2}
+\(z^4+1=0\) 得极点 \(z_1=\frac{\sqrt{2}}{2}(1+i), z_2=\frac{\sqrt{2}}{2}(-1+i), z_3=\frac{\sqrt{2}}{2}(-1-i), z_4=\frac{\sqrt{2}}{2}(1-i)\), 其中 \(z_1, z_4\) 在 \(C\) 内.
+
+\(\Res[\frac{1}{1+z^4}, z_1]=\frac{1}{4z_1^3}=\frac{\sqrt{2}}{8}(-1-i)\),
+
+\(\Res[\frac{1}{1+z^4}, z_4]=\frac{1}{4z_2^3}=\frac{\sqrt{2}}{8}(-1+i)\).
+
+故 \(\int_C\frac{dz}{1+z^4}=2\pi i(\Res[\frac{1}{1+z^4}, z_1]+\Res[\frac{1}{1+z^4}, z_4])=-\frac{\sqrt{2}}{2}\pi i\).
+
+\subquestion{3}
+设 \(f(z)=\frac{1}{(z^2-1)(z^3+1)}=\frac{1}{(z-1)(z+1)^2(z-\frac{1}{2}-\frac{\sqrt{3}}{2}i)(z-\frac{1}{2}+\frac{\sqrt{3}}{2}i)}\), 其有 1 级极点 \(z=1, z=\frac{1}{2}\pm\frac{\sqrt{3}}{2}i\), 2 级极点 \(z=-1\).
+
+若 \(r<1\), 则没有极点在 \(C\) 内, \(\int_Cf(z)\,dz=0\).
+
+若 \(r>1\), 则所有极点都在 \(C\) 内,
+
+\(\Res[f(z), 1]=\lim_{z\to1}(z-1)f(z)=\frac{1}{4}\),
+
+\(\Res[f(z), \frac{1}{2}+\frac{\sqrt{3}}{2}i]=\lim_{z\to\frac{1}{2}+\frac{\sqrt{3}}{2}i}(z-\frac{1}{2}-\frac{\sqrt{3}}{2}i)f(z)=\frac{i}{3\sqrt{3}}\),
+
+\(\Res[f(z), \frac{1}{2}-\frac{\sqrt{3}}{2}i]=\lim_{z\to\frac{1}{2}-\frac{\sqrt{3}}{2}i}(z-\frac{1}{2}+\frac{\sqrt{3}}{2}i)f(z)=-\frac{i}{3\sqrt{3}}\),
+
+\(\Res[f(z), -1]=\lim_{z\to-1}((z+1)^2f(z))'=-\frac{1}{4}\).
+
+故 \(\int_Cf(z)\,dz=2\pi i(\Res[f(z), 1]+\Res[f(z), \frac{1}{2}+\frac{\sqrt{3}}{2}i]+\Res[f(z), \frac{1}{2}-\frac{\sqrt{3}}{2}i]+\Res[f(z), -1])=0\).
+
+综上, \(\int_C\frac{dz}{(z^2-1)(z^3+1)}=0\).
+
+\subquestion{5}
+修正 \(C: x^{\frac{2}{3}}+y^{\frac{2}{3}}=4^\frac{2}{3}\).
+
+设 \(f(z)=\frac{1}{(z^2-1)^2(z-3)^2}\), 有 2 级极点 \(z=\pm1, z=3\).
+
+\(\Res[f(z), 1]=\lim_{z\to1}((z-1)^2f(z))'=0\),
+
+\(\Res[f(z), -1]=\lim_{z\to-1}((z+1)^2f(z))'=\frac{3}{128}\),
+
+\(\Res[f(z), 3]=\lim_{z\to3}((z-3)^2f(z))'=-\frac{3}{128}\).
+
+故 \(\int_Cf(z)\,dz=2\pi i(\Res[f(z), 1]+\Res[f(z), -1]+\Res[f(z), 3])=0\).
+
+\begin{center}
+  \fbox{\bfseries\Large 附~加}
+\end{center}
+
+\question{1}
+求 \(\int_{|z|=3}\frac{z^{2022}-1}{z^{2023}-1}\,dz\).
+
+设 \(f(z)=\frac{z^{2022}-1}{z^{2023}-1}\), 其有 1 级极点 \(z_k=e^{i\frac{2k\pi}{2023}}, k=0,1,\dots,2022\).
+
+\textit{方法1.} \(\Res[f(z), z_k]=\frac{z_k^{2022}-1}{2023z_k^{2022}}=\frac{z_k^{2022}-1}{\frac{2023}{z_k}}=\frac{1-z_k}{2023}\). (反复利用 \(z_k^{2023}=1\).)
+
+故 \(\int_{|z|=3}f(z)\,dz=2\pi i\sum_{k=0}^{2022}\frac{1-z_k}{2023}=2\pi i\sum_{k=0}^{2022}\frac{1}{2023}=2\pi i\).
+
+\textit{方法2.} 由 \(\sum_{k=0}^{2022}\Res[f(z), z_k]+\Res[f(z), \infty]=0\), 得 \(\sum_{k=0}^{2022}\Res[f(z), z_k]=-\Res[f(z), \infty]\).
+
+\(f(z)=(\frac{1}{z}-\frac{1}{z^{2023}})\frac{1}{1-\frac{1}{z^{2023}}}=(\frac{1}{z}-\frac{1}{z^{2023}})\sum_{n=0}^{+\infty}(\frac{1}{z^{2023}})^n\), 所以 \(\Res[f(z), \infty]=-a_{-1}=-1\), 其中 \(a_{-1}\) 为 \(\frac{1}{z}\) 项的系数.
+
+故 \(\sum_{k=0}^{2022}\Res[f(z), z_k]=1\), 即 \(\int_{|z|=3}f(z)\,dz=2\pi i\).
+
+\question{2}
+求 \(\int_{|z|=3}e^{\frac{2023}{z}}\,dz\).
+
+设 \(f(z)=e^{\frac{2023}{z}}\), 有极点 \(z=0\).
+
+\(f(z)=\sum_{n=0}^{+\infty}\frac{(\frac{2023}{z})^n}{n!}=1+\frac{2023}{z}+\cdots\).
+
+故 \(\Res[f(z), 0]=2023\), 即 \(\int_{|z|=3}f(z)\,dz=4046\pi i\).
+
+\end{document}
